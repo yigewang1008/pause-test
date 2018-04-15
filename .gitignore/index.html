@@ -1,0 +1,23 @@
+
+<html>
+  <head>
+    <title>pause background</title>
+    <meta name="description" content="Hello, WebVR! - A-Frame">
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene fog="type: exponential; density: 0.15; color: #fffda8;">
+     <a-animation attribute="fog.color"
+                 dur="7000"
+                 from="#fffda8"
+                 to="#ffc4df"
+                 repeat="indefinite"
+                 direction="alternate">
+    </a-animation>
+      <a-sky color="#fffcfe"></a-sky>
+      <a-plane id="ground" position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#22a7f9" material="roughness: 1;"></a-plane>
+      <a-light position="1.4 3.6 -5" type="point" intensity="1.5" color="#00E6FF"></a-light>
+      <a-light type="ambient" intensity=".8" color="#00E6FF"></a-light>
+    </a-scene>
+  </body>
+</html>
