@@ -1,11 +1,11 @@
 <html>
   <head>
-    <title>pause background</title>
+    <title>pause test2_YW</title>
     <meta name="" content="">
-    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene fog="type: exponential; density: 0.15; color: #e0c1ff;">
+    <a-scene fog="type: exponential; density: 0.15; color: #4957ff;">
       
     <a-entity camera look-controls position="0 1.6 0">
       <a-entity cursor="fuse: false; fuseTimeout: 500"
@@ -17,16 +17,27 @@
     </a-entity>
     
 
-    <a-entity id="box" cursor-listener geometry="primitive: box" material="color: blue"></a-entity>
+    <a-entity id="base" scale="0.5 0.5 0.5" cursor-listener geometry="primitive: cylinder" material="color: #899bff"></a-entity>
+      
+      <a-sphere position="0.60 1.46 -2.08"
+                color="#ffffff" radius="0.2"></a-sphere>
+      
+      
+      
     
-      <a-animation attribute="fog.color"  dur="7000" from="#e0c1ff" to="#ffd0bc" repeat="indefinite" direction="alternate">
+      <a-animation attribute="fog.color"  dur="7000" from="#9cb3ff" to="#ffd0bc" repeat="indefinite" direction="alternate">
       </a-animation>
       <a-sky color="#fffcfe"></a-sky>
-      <a-plane id="ground" position="0 0 0" rotation="-90 0 0" width="500" height="500" color="#22a7f9" material="roughness: 1;">
-        <a-animation attribute="color" dur="7000"  from="#22a7f9" to="#e3ffbc" repeat="indefinite" direction="alternate"></a-animation></a-plane>
+      <a-plane id="ground" position="0 0 0" rotation="-90 0 0" width="500" height="500" color="#fd205c" material="roughness: 1;">
+        <a-animation attribute="color" dur="7000"  from="#ffb6ef" to="#e3ffbc" repeat="indefinite" direction="alternate"></a-animation></a-plane>
       
-        <a-light position="1.4 3.6 -5" type="point" intensity="1.5" color="#00E6FF"></a-light>
-        <a-light type="ambient" intensity=".8" color="#00E6FF"></a-light>
+        <a-light position="1.4 3.6 -5" type="point" intensity="0.50" color="#acd9ff"></a-light>
+      
+        <a-light position="1.4 3.6 5" type="point" intensity="0.66" color="#ffbbf7"></a-light>
+      
+        <a-light type="ambient" intensity=".5" color="#e6fff8"></a-light>
+      
+      
       
         </a-scene>
       </body>
